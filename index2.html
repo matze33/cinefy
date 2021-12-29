@@ -17,6 +17,9 @@
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet"
         href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&family=Staatliches&display=swap" rel="stylesheet">
 
     <!-- Plugins -->
   </head>
@@ -26,8 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark border border-dark bg-dark dark-bg">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src=" https://dummyimage.com/100x30/aa1111/fff" alt="UI Kit"
-            style="width: 100px;">
+          <img src="assets/logo-30px.png" alt="UI Kit">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
@@ -37,20 +39,20 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
             <li class="nav-item active me-3">
-              <a class="nav-link" href="#">Home <span
+              <a class="nav-link" href="#">Start <span
                   class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Über uns</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#">Tarife & Preise</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Our Work</a>
+              <a class="nav-link" href="#">Standorte</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Contacts</a>
+              <a class="nav-link" href="#">Kontakt</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link" href="#" id="navbarDropdown" role="button"
@@ -58,14 +60,14 @@
                 aria-expanded="false">
                 <img class="rounded-circle u-box-shadow-sm me-2" width="25"
                   height="25" src=" https://dummyimage.com/100/aa1111/fff"
-                  alt="Htmlstream"> John Doe <i class="fa fa-angle-down   "></i>
+                  alt="Htmlstream"> Anmelden <i class="fa fa-angle-down   "></i>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Account Settings</a>
+                <a class="dropdown-item" href="#">Profil</a>
+                <a class="dropdown-item" href="#">Account Einstellungen</a>
                 <a class="dropdown-item" href="#">Newsletter</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Sign Out</a>
+                <a class="dropdown-item" href="#">Ausloggen</a>
               </div>
             </li>
           </ul>
@@ -76,15 +78,16 @@
 
 
     <section class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
-      style="min-height: 100vh; background-size: cover; background-image: url(&quot;Cinema-PNG-Transparent-HD-Photo.png">
+      style="min-height: 100vh; background-size: cover; background-position: center; background-image: url(&quot;Cinema-PNG-Transparent-HD-Photo.png">
       <div class="container ">
         <div class="row align-items-center d-flex justify-content-between">
           <div class="col-12 col-md-6 pb-5 order-2 order-sm-2 ">
-            <h1 class="  text-white fw-bold mb-3 mt-5 display-3">Das größte Streaming-Abo der Welt!</h1>
-            <p class="lead text-white">Filme ohne Ende - in originaler Kino-Größe. Ab 19,99€ im Monat.</p>
+            <div><img src="assets/logo-textonly.png" style="width:50%;"></div>
+            <h1 class="  text-white fw-bold mb-3 mt-5 display-3" style="font-family: 'Staatliches', cursive; text-shadow: 2px 2px #000;">Das größte Streaming-Abo der Welt!</h1>
+            <p class="lead text-white" style="font-family: 'Sedgwick Ave', cursive; text-shadow: 2px 2px #000;">Filme ohne Ende - in originaler Kino-Größe. Ab 19,99€ im Monat.</p>
             <div class=" d-flex mt-3 mb-1">
               <a class="btn btn-primary btn-raised text-uppercase btn-lg  mt-md-3 "
-                href="#" role="button">Jetzt buchen!</a>
+                href="#" role="button">▶ Jetzt buchen!</a>
             </div>
           </div>
           <div class="col-12 col-md-6 order-sm-1 order-md-2  ">
@@ -109,36 +112,32 @@
                 <div class=" text-sm-left text-md-center mb-5">
                   <i class="fa  fa-laptop fa-2x p-3 mt-1 mb-2   rounded-circle text-primary"
                     aria-hidden="true"></i>
-                  <h3 class=" my-2">Responsive Layouts</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quod tenetur ex natus at dolorem enim!</p>
+                  <h3 class=" my-2">XXL-Streaming</h3>
+                  <p>Genieße das Filmerlebnis, wie es gedacht ist: auf den großen Leinwänden, die nur Kinos bieten können!</p>
                 </div>
               </div>
               <div class="col-md-6 col-6 h-100">
                 <div class=" text-sm-left text-md-center mb-5">
                   <i class="fa fa-code fa-2x p-2 mt-1 mb-2 text-primary rounded-circle "
                     aria-hidden="true"></i>
-                  <h3 class=" my-2">Bootstrap 5</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quod tenetur ex natus at dolorem enim! </p>
+                  <h3 class=" my-2">In deiner Nähe</h3>
+                  <p>Die Filme sind dort, wo du bist - mit aktuell 5 Standorten in und um Stuttgart</p>
                 </div>
               </div>
               <div class="col-md-6 col-6 h-100">
                 <div class=" text-sm-left text-md-center mb-5">
                   <i class="far fa-gem fa-2x p-2 mt-1 mb-2 text-primary rounded-circle "
                     aria-hidden="true"></i>
-                  <h3 class="my-2">Unique Design</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quod tenetur ex natus at dolorem enim!</p>
+                  <h3 class="my-2">Die neusten Blockbuster</h3>
+                  <p>Hier hast du garantiert noch nicht alle Filme gesehen - das komplette Kinoprogramm liegt dir zu Füßen</p>
                 </div>
               </div>
               <div class="col-md-6 col-6 h-100">
                 <div class=" text-sm-left text-md-center mb-5">
                   <i class="fa fa-comments fa-2x p-2 mt-1 mb-2 text-primary rounded-circle  "
                     aria-hidden="true"></i>
-                  <h3 class=" my-2">24/7 Support</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quod tenetur ex natus at dolorem enim!</p>
+                  <h3 class=" my-2">Dein Komfort</h3>
+                  <p>Fühl dich wie zu Hause - je nach Paket genießt du Vorstellungen zu allen Uhrzeiten und dazu noch unsere heißgeliebten Snacks</p>
                 </div>
               </div>
             </div>
