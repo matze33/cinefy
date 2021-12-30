@@ -20,12 +20,10 @@ if(isset($_GET['login'])) {
 
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login</title>
-</head>
-<body>
+<?php include('assets/header.php');?>
+
+<div style="background-color:#fff;color:#f00;text-align:center;">
+  <br /><br /><br /><br />
 
 <?php
 if(isset($errorMessage)) {
@@ -42,5 +40,8 @@ Dein Passwort:<br>
 
 <input type="submit" value="Abschicken">
 </form>
-</body>
-</html>
+
+<br /><br />
+</div>
+
+<?php include('assets/footer.php');?>

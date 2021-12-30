@@ -1,84 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Cinefy - Dein XXL-Streaming-Erlebnis</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="assets/favicon.ico">
-    <link rel="stylesheet"
-      href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css ">
-    <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet"
-        href="assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&family=Staatliches&display=swap" rel="stylesheet">
-
-    <!-- Plugins -->
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark border border-dark bg-dark dark-bg" style="position:fixed; width:100vw; z-index:999;">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/logo-30px.png" alt="UI Kit">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav ms-auto me-sm-2 mt-2 mt-lg-0">
-            <li class="nav-item active me-3">
-              <a class="nav-link" href="#">Start <span
-                  class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="#">Über uns</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="#">Tarife & Preise</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="#">Standorte</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="#">Kontakt</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-                <img class="rounded-circle u-box-shadow-sm me-2" width="25"
-                  height="25" src=" https://dummyimage.com/100/aa1111/fff"
-                  alt="Htmlstream"> Interner Bereich <i class="fa fa-angle-down   "></i>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profil</a>
-                <a class="dropdown-item" href="#">Account Einstellungen</a>
-                <a class="dropdown-item" href="#">Newsletter</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="register.php">Registrieren</a>
-                <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="acp.php">Admin Control Panel</a>
-                <a class="dropdown-item" href="logout.php">Ausloggen</a>
-              </div>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </nav>
-
+<?php include('assets/header.php');?>
 
     <section class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
       style="min-height: 100vh; background-size: cover; background-position: center; background-image: url(&quot;assets/Cinema-PNG-Transparent-HD-Photo.png">
@@ -108,6 +28,11 @@
     </section>
     <section class="pt-5 pb-5">
       <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1 id="aboutus">Über uns</h1>
+          </div>
+        </div>
         <div class="row mb-4">
           <div class="col-md-8 col-sm-12 order-sm-2">
             <div class="row">
@@ -156,7 +81,7 @@
       <div class="container">
         <div class="row text-center">
           <div class="col">
-            <h1>Welcher Kino-Typ bist du?</h1>
+            <h1 id="plans">Welcher Kino-Typ bist du?</h1>
             <h2>3 Pakete - (d)eine Wahl</h2>
           </div>
         </div>
@@ -212,7 +137,7 @@
       <div class="container">
         <div class="row text-center">
           <div class="col">
-            <h3 class="display-5 mb-4">Our Team</h3>
+            <h3 class="display-5 mb-4" id="team">Our Team</h3>
           </div>
         </div>
         <div class="row text-center mt-md-5 justify-content-center">
@@ -275,7 +200,7 @@
       <div class="container">
         <div class="row text-center justify-content-center">
           <div class="col-12 col-md-8 col-lg-7">
-            <h3 class="fw-bold display-4">Contact Us</h3>
+            <h3 class="fw-bold display-4" id="contact">Kontakt</h3>
             <p class="lead mt-3 mb-5">If you’re already an active user, please
               <a href="#">sign in</a> before contacting us.
             </p>
@@ -314,78 +239,16 @@
         </div>
       </div>
       <div class="container-fluid p-0 mt-5">
+        <div class="row text-center">
+          <div class="col">
+            <h1 id="location">Standort</h1>
+          </div>
+        </div>
         <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2631.0934061660414!2d9.098571915670256!3d48.74191247927628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799dc42026cc05f%3A0xeb88e48af65defde!2sHochschule%20der%20Medien!5e0!3m2!1sde!2sde!4v1639268045907"
           width="100%" height="300" frameborder="0" style="border:0"
           allowfullscreen=""></iframe>
       </div>
     </section>
-    <section class="">
-      <footer class="pt-4 pb-4 ">
-        <div class="container">
-          <div class="row align-items-top text-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-sm-start">
-              <h3><strong>Group 1</strong></h3>
-              <nav class="nav flex-column">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
-                <a class="nav-link" href="#">Team</a>
-                <a class="nav-link" href="#">Contact Us</a>
-              </nav>
-            </div>
-            <div
-              class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0 text-sm-start">
-              <h3><strong>Group 2</strong></h3>
-              <nav class="nav flex-column">
-                <a class="nav-link active" href="#">Privacy Policy</a>
-                <a class="nav-link" href="#">Terms</a>
-                <a class="nav-link" href="#">FAQ</a>
-                <a class="nav-link" href="#">Support</a>
-              </nav>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 text-md-start mt-5 mt-md-0">
-              <h3><strong>About Us</strong></h3>
-              <p>Bootstraptor provides high quality assets for your business. We
-                help entrepreneurs with great ideas achieving their goals
-                faster.</p>
-            </div>
-            <div class="col-12 col-lg-2 ml-auto text-lg-start mt-4 mt-lg-0">
-              <h3><strong>Follow Us</strong></h3>
-              <p class="text-h3">
-                <a href="#">
-                  <i class="fab fa-twitter" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;
-                <a href="#">
-                  <i class="fab fa-facebook" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;
-                <a href="#">
-                  <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;
-                <a href="#">
-                  <i class="fab fa-pinterest" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;
-                <a href="#">
-                  <i class="fab fa-google" aria-hidden="true"></i>
-                </a>
-              </p>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col text-center">
-              © 2021 Bootstraptor. All Rights Reserved
-            </div>
-          </div>
-        </div>
-      </footer>
-    </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy"
-      crossorigin="anonymous"></script>
-
-
-  </body>
-
-</html>
+<?php include('assets/footer.php');?>

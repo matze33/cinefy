@@ -2,12 +2,10 @@
 session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Registrierung</title>
-</head>
-<body>
+<?php include('assets/header.php');?>
+
+<div style="background-color:#fff;color:#f00;text-align:center;">
+  <br /><br /><br /><br />
 
 <?php
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
@@ -33,7 +31,7 @@ if(isset($_GET['register'])) {
 
     //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
     if(!$error) {
-        $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $statement = $pdo->prepare("SELECT * FROM login WHERE email = :email");
         $result = $statement->execute(array('email' => $email));
         $user = $statement->fetch();
 
@@ -47,14 +45,14 @@ if(isset($_GET['register'])) {
     if(!$error) {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $statement = $pdo->prepare("INSERT INTO users (email, password) VALUES (:email, :password)");
+        $statement = $pdo->prepare("INSERT INTO login (email, password) VALUES (:email, :password)");
         $result = $statement->execute(array('email' => $email, 'password' => $password_hash));
 
         if($result) {
             echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
             $showFormular = false;
         } else {
-            echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+            echo 'Beim Speichern ist leider ein Fehler aufgetreten<br>';
         }
     }
 }
@@ -79,5 +77,7 @@ Passwort wiederholen:<br>
 } //Ende von if($showFormular)
 ?>
 
-</body>
-</html>
+<br /><br />
+</div>
+
+<?php include('assets/footer.php');?>
