@@ -1,35 +1,34 @@
-<section class="">
+<section class="" style="background-color:#000;">
+  <hr>
   <footer class="pt-4 pb-4 ">
     <div class="container">
       <div class="row align-items-top text-center">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-sm-start">
-          <h3><strong>Group 1</strong></h3>
+          <h3><strong>Rechtliches</strong></h3>
           <nav class="nav flex-column">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link" href="#">Team</a>
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="impressum.php">Impressum</a>
+            <a class="nav-link" href="datenschutz.php">Datenschutzerklärung</a>
+            <a class="nav-link" href="cookies.php">Cookie Richtlinie (EU)</a>
+            <a class="nav-link" href="disclaimer.php">Haftungsausschluss (Disclaimer)</a>
+
           </nav>
         </div>
         <div
           class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0 text-sm-start">
           <h3><strong>Group 2</strong></h3>
           <nav class="nav flex-column">
-            <a class="nav-link active" href="#">Privacy Policy</a>
-            <a class="nav-link" href="#">Terms</a>
-            <a class="nav-link" href="#">FAQ</a>
-            <a class="nav-link" href="#">Support</a>
+            <a class="nav-link active" href="#">1</a>
+            <a class="nav-link" href="#">2</a>
+            <a class="nav-link" href="#">3</a>
+            <a class="nav-link" href="#">4</a>
           </nav>
         </div>
         <div class="col-12 col-md-4 col-lg-3 text-md-start mt-5 mt-md-0">
-          <h3><strong>About Us</strong></h3>
-          <p>Bootstraptor provides high quality assets for your business. We
-            help entrepreneurs with great ideas achieving their goals
-            faster.</p>
+          <h3><strong>Über uns</strong></h3>
+          <p>Mit Cinefy erlebst du dein Filmerlebnis endlich wieder auf der großen Kinoleinwand bei dir um die Ecke - jetzt auch als Abo!</p>
         </div>
         <div class="col-12 col-lg-2 ml-auto text-lg-start mt-4 mt-lg-0">
-          <h3><strong>Follow Us</strong></h3>
+          <h3><strong>Folge uns</strong></h3>
           <p class="text-h3">
             <a href="#">
               <i class="fab fa-twitter" aria-hidden="true"></i>
@@ -41,17 +40,14 @@
               <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>&nbsp;&nbsp;
             <a href="#">
-              <i class="fab fa-pinterest" aria-hidden="true"></i>
+              <i class="fab fa-youtube" aria-hidden="true"></i>
             </a>&nbsp;&nbsp;
-            <a href="#">
-              <i class="fab fa-google" aria-hidden="true"></i>
-            </a>
           </p>
         </div>
       </div>
       <div class="row mt-3">
         <div class="col text-center">
-          © 2021 Bootstraptor. All Rights Reserved
+          © 2021-2022 Cinefy
         </div>
       </div>
     </div>

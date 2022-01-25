@@ -1,16 +1,20 @@
-<?php include('assets/header.php');?>
+<?php include('assets/header.php');
+
+session_start();
+$pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
+?>
 
     <section class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
-      style="min-height: 100vh; background-size: cover; background-position: center; background-image: url(&quot;assets/Cinema-PNG-Transparent-HD-Photo.png">
-      <div class="container ">
+      style="min-height: 100vh; background-size: cover; background-position: center; background-image: url(&quot;assets/Cinema-PNG-Transparent-HD-Photo.png&quot;);">
+      <div class="container">
         <div class="row align-items-center d-flex justify-content-between">
           <div class="col-12 col-md-6 pb-5 order-2 order-sm-2 ">
             <div><img src="assets/logo-textonly.png" style="width:50%;"></div>
-            <h1 class="  text-white fw-bold mb-3 mt-5 display-3" style="font-family: 'Staatliches', cursive; text-shadow: 2px 2px #000;">Das größte Streaming-Abo der Welt!</h1>
+            <h1 class="text-white fw-bold mb-3 mt-5 display-3" style="font-family: 'Staatliches', cursive; text-shadow: 2px 2px #000;">Das größte Streaming-Abo der Welt!</h1>
             <p class="lead text-white" style="font-family: 'Sedgwick Ave', cursive; text-shadow: 2px 2px #000;">Filme ohne Ende - in originaler Kino-Größe. Ab 19,99€ im Monat.</p>
-            <div class=" d-flex mt-3 mb-1">
+            <div class="d-flex mt-3 mb-1">
               <a class="btn btn-primary btn-raised text-uppercase btn-lg  mt-md-3 "
-                href="#" role="button">▶ Jetzt buchen!</a>
+                href="#plans" role="button">▶ Jetzt buchen!</a>
             </div>
           </div>
           <div class="col-12 col-md-6 order-sm-1 order-md-2  ">
@@ -38,7 +42,7 @@
             <div class="row">
               <div class="col-md-6 col-6 h-100">
                 <div class=" text-sm-left text-md-center mb-5">
-                  <i class="fa  fa-laptop fa-2x p-3 mt-1 mb-2   rounded-circle text-primary"
+                  <i class="fa  fa-tv fa-2x p-3 mt-1 mb-2   rounded-circle text-primary"
                     aria-hidden="true"></i>
                   <h3 class=" my-2">XXL-Streaming</h3>
                   <p>Genieße das Filmerlebnis, wie es gedacht ist: auf den großen Leinwänden, die nur Kinos bieten können!</p>
@@ -46,7 +50,7 @@
               </div>
               <div class="col-md-6 col-6 h-100">
                 <div class=" text-sm-left text-md-center mb-5">
-                  <i class="fa fa-code fa-2x p-2 mt-1 mb-2 text-primary rounded-circle "
+                  <i class="fa fa-map-marker-alt fa-2x p-2 mt-1 mb-2 text-primary rounded-circle "
                     aria-hidden="true"></i>
                   <h3 class=" my-2">In deiner Nähe</h3>
                   <p>Die Filme sind dort, wo du bist - mit aktuell 5 Standorten in und um Stuttgart</p>
@@ -62,7 +66,7 @@
               </div>
               <div class="col-md-6 col-6 h-100">
                 <div class=" text-sm-left text-md-center mb-5">
-                  <i class="fa fa-comments fa-2x p-2 mt-1 mb-2 text-primary rounded-circle  "
+                  <i class="fa fa-couch fa-2x p-2 mt-1 mb-2 text-primary rounded-circle  "
                     aria-hidden="true"></i>
                   <h3 class=" my-2">Dein Komfort</h3>
                   <p>Fühl dich wie zu Hause - je nach Paket genießt du Vorstellungen zu allen Uhrzeiten und dazu noch unsere heißgeliebten Snacks</p>
@@ -71,7 +75,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-12 order-sm-1">
-            <img src="https://dummyimage.com//380x500/aa1111/fff"
+            <img src="assets/filmstreifen.png" style="max-height:500px;"
               class="img-fluid rounded shadow-lg d-md-block d-lg-block d-none">
           </div>
         </div>
@@ -93,10 +97,6 @@
               <p class="display-3"><strong>19,99€/mtl.</strong></p>
               <p class="text-h4">Das Angebot für Sparfüchse.
                 Beinhaltet alle Vorstellungen zwischen 10 und 18 Uhr.</p>
-              <p class=" pt-4">
-                <a href="#" class="btn btn-primary btn-lg w-100  ">Paket
-                  buchen</a>
-              </p>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -107,10 +107,6 @@
               <p class="display-3"><strong>34,99€/mtl.</strong></p>
               <p class="text-h4">Beinhaltet alle Vorstellungen
               sämtliche Filme, egal zu welcher Uhrzeit.</p>
-              <p class="text-start pt-4">
-                <a href="#" class="btn btn-primary btn-lg w-100  ">Paket
-                  buchen</a>
-              </p>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -121,14 +117,25 @@
               <p class="display-3"><strong>49,99€/mtl.</strong></p>
               <p class="text-h4">Das ultimative Kinoerlebnis rund um
               die Uhr. Alle Vorstellungen inkl. 5 Snack-Menüs pro Monat.*</p>
-              <p class="text-start pt-4">
-                <a href="#" class="btn btn-primary btn-lg w-100  ">Paket
-                  buchen</a>
-              </p>
               <p>*Auswahl aus Menüs 1-3</p>
             </div>
           </div>
         </div>
+        <br />
+        <div>
+          <!-- Trigger/Open The Modal -->
+        <button id="myBtn" class="btn btn-primary btn-lg w-100  ">Paket buchen</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <?php include('signup.php');?>
+        </div>
+        </div>
+        </div>
+        <br />
         <p style="text-align:center;">Vorab-Reservierung und 3G-Nachweise erforderlich.</p>
       </div><br />
       <hr>
@@ -145,9 +152,8 @@
             <img alt="image" class="img-fluid rounded-circle mt-3 mb-4 shadow"
               src=" https://dummyimage.com/200/aa1111/fff">
             <h3><strong>Tim Riegel</strong></h3>
-            <p>Position</p>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>Senior Manager</p>
+            <p>Tim ist unser Experte und Ihr Ansprechpartner für die Zusammenarbeit.</p>
             <div class="mb-1 mt-2 me-3 align-self-center pt-4 d-block">
               <a href="#" role="button" class="  p-2 m-2">
                 <i class="fab fa-twitter fa-md text-primary"
@@ -158,29 +164,20 @@
                   aria-hidden="true"></i>
               </a>
               <a href="#" role="button" class="  p-2 m-2">
-                <i class="fab fa-linkedin fa-md  text-primary"
-                  aria-hidden="true"></i>
-              </a>
-              <a href="#" role="button" class="  p-2 m-2">
-                <i class="fab fa-google-plus fa-md  text-primary"
+                <i class="fab fa-youtube fa-md  text-primary"
                   aria-hidden="true"></i>
               </a>
             </div>
           </div>
           <div class="col-md-4 col-12 mb-5">
             <img alt="image" class="img-fluid rounded-circle mt-3 mb-4 shadow"
-              src=" https://dummyimage.com/200/aa1111/fff">
+              src="assets/matthias.png">
             <h3><strong>Matthias Gerling</strong></h3>
-            <p>Position</p>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>Senior Manager</p>
+            <p>Matthias ist für sämtliche Kundenanliegen und Abo-Angelegenheiten zuständig.</p>
             <div class="mb-1 mt-2 me-3 align-self-center pt-4 d-block">
               <a href="#" role="button" class="  p-2 m-2">
                 <i class="fab fa-twitter fa-md text-primary"
-                  aria-hidden="true"></i>
-              </a>
-              <a href="#" role="button" class="  p-2 m-2">
-                <i class="fab fa-facebook fa-md  text-primary"
                   aria-hidden="true"></i>
               </a>
               <a href="#" role="button" class="  p-2 m-2">
@@ -188,7 +185,7 @@
                   aria-hidden="true"></i>
               </a>
               <a href="#" role="button" class="  p-2 m-2">
-                <i class="fab fa-google-plus fa-md  text-primary"
+                <i class="fab fa-instagram fa-md  text-primary"
                   aria-hidden="true"></i>
               </a>
             </div>
@@ -201,40 +198,143 @@
         <div class="row text-center justify-content-center">
           <div class="col-12 col-md-8 col-lg-7">
             <h3 class="fw-bold display-4" id="contact">Kontakt</h3>
-            <p class="lead mt-3 mb-5">If you’re already an active user, please
-              <a href="#">sign in</a> before contacting us.
-            </p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-7">
-            <form>
-              <div class="row">
-                <div class="col">
-                  <label>Your Email Address</label>
-                  <input type="text" class="form-control mt-1">
+            <div>
+              <div class="container">
+                  <h1 class="display-4">Kontaktformular</h1>
+                  <form action="" method="post">
+                    <input name="security" type="hidden" value="secure">
+                    <div class="row">
+                      <div class="form-group col-md-4">
+                        <label for="SelectGender">Anrede</label>
+                        <select name="gender" class="form-control" id="SelectGender">
+                          <option value="Herr">Herr</option>
+                          <option value="Frau">Frau</option>
+                          <option value="div"> </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="InputName">Name</label>
+                        <input name="name" type="text" class="form-control" id="InputName">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="InputEmail">E-Mail-Adresse <span class="req">Pflichtfeld</span></label>
+                        <input name="email" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="TextareaMessage">Nachricht <span class="req">Pflichtfeld</span></label>
+                      <textarea name="message" class="form-control" id="TextareaMessage" rows="3" required></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input type="hidden" name="optin" value="0">
+                        <input type="checkbox" id="opt-in" name="optin" value="1" class="form-check-input" required>
+                        <label for="opt-in">
+                          <strong>HINWEIS</strong> <span class="req">Pflichtfeld</span><br>Ich habe die Hinweise in der <a href="datenschutz.php">Datenschutzerklärung</a> verstanden und stimme diesen hiermit zu.
+                        </label>
+                      </div>
+                    <button type="submit" name="sendform" class="btn btn-light">Absenden</button>
+                  </form>
                 </div>
               </div>
-              <div class="row mt-4">
-                <div class="col">
-                  <label>Subject (optional but helpful)</label>
-                  <input type="email" class="form-control mt-1">
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col">
-                  <label>How can we help?</label>
-                  <textarea class="form-control mt-1 border-secondary"
-                    name="message" rows="3"></textarea>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col text-right">
-                  <button type="submit"
-                    class="btn btn-primary btn-lg">Submit</button>
-                </div>
-              </div>
-            </form>
+
+          <?php
+              if ( isset($_POST['sendform']) && ($_POST['security'] == 'secure') ) :
+                  if ( !empty($_POST['email']) ) :
+                    if ( !empty($_POST['optin']) ) :
+
+                      $gender = htmlspecialchars($_POST['gender']);
+                      $name = htmlspecialchars($_POST['name']);
+                      $email = htmlspecialchars($_POST['email']);
+                      $message = htmlspecialchars($_POST['message']);
+
+                      $formmail = 'mg217@hdm-stuttgart.de';
+
+                      if ( preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email) ) :
+
+                        $subject = 'Eine neue Kontaktformularanfrage ist eingetroffen.';
+                        $message = "
+                          <html>
+                          <head>
+                          <title>Neue Anfrage</title>
+                          </head>
+                            <body>
+                              <p>Eine neue Anfrage von " . $gender . " " . $name . " ist eingegangen.</p>
+                              <p>Die hinterlegte E-Mail-Adresse lautet: " . $email . ".</p>
+                              <p><strong>Nachricht:</strong> <br> " . $message . "</p>
+                            </body>
+                          </html>
+                        ";
+
+                        $userSubject = 'Ihre Anfrage bei Cinefy';
+                        $userMessage = "
+                          <html>
+                          <head>
+                           <title>Deine Überschrift in der E-Mail</title>
+                          </head>
+                            <body>
+                              <p>Vielen Dank für Ihre Anfrage. <br>
+                              Sie bekommen schnellstmöglich eine Antwort</p>
+                            </body>
+                          </html>
+                        ";
+
+                        $headers = "MIME-Version: 1.0" . "\r\n";
+                        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                        $headers .= "From: <' . $formmail . '>" . "\r\n";
+
+                        mail($formmail, $subject, $message, $headers);
+                        mail($email, $userSubject, $userMessage, $headers);
+
+                        echo '
+                          <div class="container">
+                            <div class="alert alert-success" role="alert">
+                              Anfrage erfolgreich versendet!
+                            </div>
+                          </div>
+                        ';
+
+                      else :
+
+                        echo '
+                          <div class="container">
+                            <div class="alert alert-danger" role="alert">
+                              Bitte eine korrekte E-Mail-Adresse eingeben.
+                            </div>
+                          </div>
+                        ';
+
+                      endif;
+
+                    else :
+
+                      echo '
+                          <div class="container">
+                            <div class="alert alert-danger" role="alert">
+                              Haben Sie die Datenschutzerklärung gelesen? Dann bitte bestätigen.
+                            </div>
+                          </div>
+                        ';
+
+                    endif;
+
+                  else :
+
+                    echo '
+                          <div class="container">
+                            <div class="alert alert-danger" role="alert">
+                              Bitte eine E-Mail-Adresse eingeben.
+                            </div>
+                          </div>
+                        ';
+
+                  endif;
+                endif; ?>
           </div>
         </div>
       </div>
@@ -252,3 +352,31 @@
     </section>
 
 <?php include('assets/footer.php');?>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

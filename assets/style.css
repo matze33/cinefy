@@ -24,3 +24,44 @@ a {
 .navbar {
   background-color:#000 !important;
 }
+
+/* The Modal (background) */
+.modal {
+ display: none; /* Hidden by default */
+ position: fixed; /* Stay in place */
+ z-index: 10; /* Sit on top */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgba(212,212,212,0.7) !important; /* Fallback color */
+ padding-top:50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+ background-color: #fefefe;
+ max-width:60% !important;
+ margin: 15% auto; /* 15% from the top and centered */
+ padding: 20px;
+ border: 1px solid #888;
+ width: 80%; /* Could be more or less, depending on screen size */
+ text-align:left;
+}
+
+/* The Close Button */
+.close {
+ color: #aaa;
+ float:right;
+ font-size: 28px;
+ z-index:11;
+ font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+ color: black;
+ text-decoration: none;
+ cursor: pointer;
+}
