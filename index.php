@@ -5,19 +5,19 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 ?>
 
     <section class="pt-5 pb-5 mt-0 align-items-center d-flex bg-dark"
-      style="min-height: 100vh; background-size: cover; background-position: center; background-image: url(&quot;assets/Cinema-PNG-Transparent-HD-Photo.png&quot;);">
+      style="min-height: 100vh; background-size: cover; background-position: center; background-image: url(&quot;assets/cinema.png&quot;);">
       <div class="container">
-        <div class="row align-items-center d-flex justify-content-between">
+        <div class="row align-items-center d-flex justify-content-between" style="padding-left: 30px;">
           <div class="col-12 col-md-6 pb-5 order-2 order-sm-2 ">
-            <div><img src="assets/logo-textonly.png" style="width:50%;"></div>
-            <h1 class="text-white fw-bold mb-3 mt-5 display-3" style="font-family: 'Staatliches', cursive; text-shadow: 2px 2px #000;">Das größte Streaming-Abo der Welt!</h1>
-            <p class="lead text-white" style="font-family: 'Sedgwick Ave', cursive; text-shadow: 2px 2px #000;">Filme ohne Ende - in originaler Kino-Größe. Ab 19,99€ im Monat.</p>
+            <div><img src="assets/logo-textonly.png" style="width:48%;"></div>
+            <h1 class="text-white fw-bold mb-3 mt-5 display-3" style="font-family: 'Staatliches', cursive; text-shadow: 3px 3px #000;">Das größte Streaming-Abo der Welt!</h1>
+            <p class="lead text-white" style="font-family: 'Sedgwick Ave', cursive; text-shadow: 3px 3px #000;">Filme ohne Ende - in originaler Kino-Größe. Ab 19,99€ im Monat.</p>
             <div class="d-flex mt-3 mb-1">
               <a class="btn btn-primary btn-raised text-uppercase btn-lg  mt-md-3 "
                 href="#plans" role="button">▶ Jetzt buchen!</a>
             </div>
           </div>
-          <div class="col-12 col-md-6 order-sm-1 order-md-2  ">
+        <!--  <div class="col-12 col-md-6 order-sm-1 order-md-2  ">
             <div
               class="icon-wrap text-primary d-flex justify-content-md-center my-3">
               <button href="#"
@@ -26,7 +26,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
                 <i class=" fas fa-play fa-lg ml-1"></i>
               </button>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </section>
@@ -150,7 +150,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
         <div class="row text-center mt-md-5 justify-content-center">
           <div class="col-md-4 col-12 mb-5">
             <img alt="image" class="img-fluid rounded-circle mt-3 mb-4 shadow"
-              src=" https://dummyimage.com/200/aa1111/fff">
+              src="assets/tim.png">
             <h3><strong>Tim Riegel</strong></h3>
             <p>Senior Manager</p>
             <p>Tim ist unser Experte und Ihr Ansprechpartner für die Zusammenarbeit.</p>
