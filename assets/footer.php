@@ -1,6 +1,6 @@
 <section class="" style="background-color:#000;">
   <hr>
-  <footer class="pt-4 pb-4 ">
+  <footer class="pt-3 pb-3 ">
     <div class="container">
       <div class="row align-items-top text-center">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-sm-start">
@@ -13,7 +13,7 @@
 
           </nav>
         </div>
-        <div
+    <!--    <div
           class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0 text-sm-start">
           <h3><strong>Group 2</strong></h3>
           <nav class="nav flex-column">
@@ -22,12 +22,16 @@
             <a class="nav-link" href="#">3</a>
             <a class="nav-link" href="#">4</a>
           </nav>
-        </div>
-        <div class="col-12 col-md-4 col-lg-3 text-md-start mt-5 mt-md-0">
+        </div>-->
+        <div class="col-12 col-md-8 col-lg-6 text-md-start mt-5 mt-md-0">
           <h3><strong>Über uns</strong></h3>
-          <p>Mit Cinefy erlebst du dein Filmerlebnis endlich wieder auf der großen Kinoleinwand bei dir um die Ecke - jetzt auch als Abo!</p>
+          <p>Mit Cinefy erlebst du dein Filmerlebnis endlich wieder auf der
+            großen Kinoleinwand bei dir um die Ecke - jetzt auch als Abo! Wir
+            arbeiten mit 10 Kinobetreibern im Großraum Stuttgart zusammen.
+          Dadurch hast du die Möglichkeit, die aktuellsten Filme als Flatrate
+          auf der großen Leinwand in deiner Nähe zu erleben.</p>
         </div>
-        <div class="col-12 col-lg-2 ml-auto text-lg-start mt-4 mt-lg-0">
+        <div class="col-12 col-lg-3 ml-auto text-lg-start mt-4 mt-lg-0">
           <h3><strong>Folge uns</strong></h3>
           <p class="text-h3">
             <a href="#">

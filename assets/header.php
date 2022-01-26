@@ -60,19 +60,15 @@
               <a class="nav-link" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
-                <img class="rounded-circle u-box-shadow-sm me-2" width="25"
-                  height="25" src=" https://dummyimage.com/100/aa1111/fff"
+                <img class="rounded-circle u-box-shadow-sm me-2" width="35"
+                  height="35" src="assets/avatar.png"
                   alt="Htmlstream"> Interner Bereich <i class="fa fa-angle-down   "></i>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profil</a>
-                <a class="dropdown-item" href="#">Account Einstellungen</a>
-                <a class="dropdown-item" href="#">Newsletter</a>
-                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="register.php">Registrieren</a>
                 <a class="dropdown-item" href="login.php">Login</a>
                 <a class="dropdown-item" href="acp.php">Admin Control Panel</a>
-                <a class="dropdown-item" href="logout.php">Ausloggen</a>
+                <a class="dropdown-item" href="logout.php">Log Out</a>
               </div>
             </li>
           </ul>

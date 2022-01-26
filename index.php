@@ -42,7 +42,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
             <div class="row">
               <div class="col-md-6 col-6 h-100">
                 <div class=" text-sm-left text-md-center mb-5">
-                  <i class="fa  fa-tv fa-2x p-3 mt-1 mb-2   rounded-circle text-primary"
+                  <i class="fa  fa-tv fa-2x p-2 mt-1 mb-2   rounded-circle text-primary"
                     aria-hidden="true"></i>
                   <h3 class=" my-2">XXL-Streaming</h3>
                   <p>Genieße das Filmerlebnis, wie es gedacht ist: auf den großen Leinwänden, die nur Kinos bieten können!</p>

@@ -7,6 +7,10 @@ a {
   color:#a11;
 }
 
+a:hover {
+  color:#700;
+}
+
 .btn-primary {
   background-color:#a11;
   border-color:#a11;
