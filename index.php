@@ -69,7 +69,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
                   <i class="fa fa-couch fa-2x p-2 mt-1 mb-2 text-primary rounded-circle  "
                     aria-hidden="true"></i>
                   <h3 class=" my-2">Dein Komfort</h3>
-                  <p>Fühl dich wie zu Hause - je nach Paket genießt du Vorstellungen zu allen Uhrzeiten und dazu noch unsere heißgeliebten Snacks</p>
+                  <p>Fühl dich wie zu Hause - je nach Paket genießt du Vorstellungen und dazu noch unsere heißgeliebten Snacks</p>
                 </div>
               </div>
             </div>

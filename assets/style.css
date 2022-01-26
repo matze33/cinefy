@@ -65,3 +65,7 @@ a {
  text-decoration: none;
  cursor: pointer;
 }
+
+.text-primary {
+  color:#a11 !important;
+}
