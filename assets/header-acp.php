@@ -34,6 +34,7 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/dashboard.css" rel="stylesheet">
+
   </head>
   <body>
 
@@ -67,20 +68,27 @@
           <hr>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="index.php">
+              <span data-feather="globe"></span>
               Zur Homepage
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="../phpmyadmin/">
+              <span data-feather="database"></span>
               phpMyAdmin
             </a>
           </li>
           <hr>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="logout.php">
+              <span data-feather="log-out"></span>
               Logout
             </a>
           </li>
         </ul>
       </div>
     </nav>
+
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="assets/dashboard.js"></script>
+    <script src="https://use.fontawesome.com/a9f7fb24d5.js"></script>

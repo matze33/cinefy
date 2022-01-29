@@ -47,11 +47,11 @@ if($showFormular) {
   <input name="security" type="hidden" value="secure">
   <div class="row">
     <div class="form-group col-md-4">
-      <label for="SelectGender">Anrede</label>
+      <label for="SelectGender">Geschlecht</label>
       <select name="gender" class="form-control" id="SelectGender">
-        <option value="Herr">Herr</option>
-        <option value="Frau">Frau</option>
-        <option value="Frau"> </option>
+        <option value="1">männlich</option>
+        <option value="2">weiblich</option>
+        <option value="3">divers</option>
       </select>
     </div>
   </div>
@@ -67,17 +67,17 @@ if($showFormular) {
   </div>
   <div class="form-group">
     <div>
-      <input type="radio" id="daytime" name="subscription" value="daytime"
+      <input type="radio" id="daytime" name="subscription" value="1"
          checked>
          <label for="daytime">Day-Time</label>
     </div>
     <div>
-      <input type="radio" id="allaccess" name="subscription" value="allaccess"
+      <input type="radio" id="allaccess" name="subscription" value="2"
          checked>
          <label for="allaccess">All-Access</label>
     </div>
     <div>
-      <input type="radio" id="gourmet" name="subscription" value="gourmet"
+      <input type="radio" id="gourmet" name="subscription" value="3"
          checked>
          <label for="gourmet">All-Access Gourmet</label>
     </div>

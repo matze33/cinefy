@@ -1,5 +1,4 @@
 <?php
-session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 
 $gender = '';
@@ -68,7 +67,7 @@ if(empty($_POST) == false) {
   <h1 class="h2">Cinefy Kunden Übersicht</h1>
 </div>
 
-<? if(!empty($message)) {echo($message);} ?>
+<?php if(!empty($message)) {echo($message);} ?>
 
 <h3>Eingetragene Kunden</h3>
 <p>In der Tabelle werden Kunden aufgelistet.</p>
@@ -76,14 +75,14 @@ if(empty($_POST) == false) {
 
 <form class="my-3 py-2" id="form" action="crud.php?id=<?php echo $id?>" method ="post">
 
-  <? if(!empty($message)) {echo($message);} ?>
+  <?php if(!empty($message)) {echo($message);} ?>
 
   <div class="form-group">
     <label for="gender">Geschlecht</label>
     <select id="gender" name="gender" class="form-select" aria-label="Geschlecht" required>
-      <option value="0" <? if($gender == 0) {echo 'selected="selected"'; } ?>>männlich</option>
-      <option value="1" <? if($gender == 1) {echo 'selected="selected"'; } ?>>weiblich</option>
-      <option value="2" <? if($gender == 2) {echo 'selected="selected"'; } ?>>divers</option>
+      <option value="1" <?php if($gender == 1) {echo 'selected="selected"'; } ?>>männlich</option>
+      <option value="2" <?php if($gender == 2) {echo 'selected="selected"'; } ?>>weiblich</option>
+      <option value="3" <?php if($gender == 3) {echo 'selected="selected"'; } ?>>divers</option>
     </select>
   </div>
 
@@ -100,9 +99,9 @@ if(empty($_POST) == false) {
   <div class="form-group">
     <label for="subscription">Abo-Modell</label>
     <select id="exampleFormControlSelect1" name="subscription" class="form-select" aria-label="Abo" required>
-      <option value="0" <? if($gender == 0) {echo 'selected="selected"'; } ?>>Day-Time</option>
-      <option value="1" <? if($gender == 1) {echo 'selected="selected"'; } ?>>All-Access</option>
-      <option value="2" <? if($gender == 2) {echo 'selected="selected"'; } ?>>All-Access Gourmet</option>
+      <option value="1" <?php if($gender == 1) {echo 'selected="selected"'; } ?>>Day-Time</option>
+      <option value="2" <?php if($gender == 2) {echo 'selected="selected"'; } ?>>All-Access</option>
+      <option value="3" <?php if($gender == 3) {echo 'selected="selected"'; } ?>>All-Access Gourmet</option>
     </select>
   </div>
 
