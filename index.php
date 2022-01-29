@@ -153,20 +153,17 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
               src="assets/tim.png">
             <h3><strong>Tim Riegel</strong></h3>
             <p>Senior Manager</p>
-            <p>Tim ist unser Experte und Ihr Ansprechpartner für die Zusammenarbeit.</p>
+            <p>Tim ist unser Experte und Ihr Ansprechpartner für Corporate Partnerships.</p>
             <div class="mb-1 mt-2 me-3 align-self-center pt-4 d-block">
               <a href="#" role="button" class="  p-2 m-2">
                 <i class="fab fa-twitter fa-md text-primary"
-                  aria-hidden="true"></i>
-              </a>
+                  aria-hidden="true"></i></a>
               <a href="#" role="button" class="  p-2 m-2">
                 <i class="fab fa-facebook fa-md  text-primary"
-                  aria-hidden="true"></i>
-              </a>
+                  aria-hidden="true"></i></a>
               <a href="#" role="button" class="  p-2 m-2">
                 <i class="fab fa-youtube fa-md  text-primary"
-                  aria-hidden="true"></i>
-              </a>
+                  aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="col-md-4 col-12 mb-5">
@@ -177,17 +174,14 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
             <p>Matthias ist für sämtliche Kundenanliegen und Abo-Angelegenheiten zuständig.</p>
             <div class="mb-1 mt-2 me-3 align-self-center pt-4 d-block">
               <a href="#" role="button" class="  p-2 m-2">
-                <i class="fab fa-twitter fa-md text-primary"
-                  aria-hidden="true"></i>
-              </a>
+              <i class="fab fa-twitter fa-md text-primary"
+              aria-hidden="true"></i></a>
               <a href="#" role="button" class="  p-2 m-2">
-                <i class="fab fa-linkedin fa-md  text-primary"
-                  aria-hidden="true"></i>
-              </a>
+              <i class="fab fa-linkedin fa-md  text-primary"
+              aria-hidden="true"></i></a>
               <a href="#" role="button" class="  p-2 m-2">
-                <i class="fab fa-instagram fa-md  text-primary"
-                  aria-hidden="true"></i>
-              </a>
+              <i class="fab fa-instagram fa-md  text-primary"
+              aria-hidden="true"></i></a>
             </div>
           </div>
         </div>

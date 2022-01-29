@@ -7,25 +7,6 @@ if(!isset($_SESSION['userid'])) {
   exit();
 }
 
-$gender = '';
-$name = '';
-$email = '';
-$id = '';
-$subscription = '';
-
-if(empty($_GET['id']) == false) {
-  $id = $_GET['id'];
-
-  $statement = $pdo->prepare("SELECT * FROM customers WHERE id = :id");
-  $result = $statement->execute(array('id' => $_GET['id']));
-  $row = $statement->fetch();
-
-  $gender = $row['gender'];
-  $name = $row['name'];
-  $email = $row['email'];
-  $subscription = $row['subscription'];
-}
-
 //Löschen
 if(empty($_GET['delete']) == false) {
   $statement = $pdo->prepare("DELETE FROM customers WHERE id = :id");
@@ -36,9 +17,9 @@ if(empty($_GET['delete']) == false) {
 $statement = $pdo->prepare("SELECT * FROM customers");
 $result = $statement->execute();
 $rows = $statement->fetchAll();
-?>
 
-<?php include('assets/header-acp.php');?>
+ include('assets/header-acp.php');
+ ?>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -91,8 +72,8 @@ $rows = $statement->fetchAll();
               <td>' . $row['email'] . '</td>
               <td>' . $subscription . '</td>
               <td>' . '
-              <a href="crud.php?id=' . $row['id'] . '" title="Eintrag bearbeiten" class="btn btn-success btn-sm"><i class="fa fa-edit">Edit</i></a>
-              <a href="dashboard.php?delete=' . $row['id'] . '" title="Eintrag bearbeiten" class="btn btn-danger btn-sm"><i class="fa fa-trash">Delete</i></a>
+              <a href="crud.php?id=' . $row['id'] . '" title="Eintrag bearbeiten" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> Edit</a>
+              <a href="dashboard.php?delete=' . $row['id'] . '" title="Eintrag bearbeiten" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Löschen</a>
               </td>
             </tr>';
           }
@@ -101,7 +82,6 @@ $rows = $statement->fetchAll();
 
           </tbody>
         </table>
-    <!--    <p>Auf Seite 10 geht's weiter // crud.php muss noch erstellt werden // signup.php repariert werden</p>-->
       </div>
     </main>
   </div>
@@ -110,5 +90,34 @@ $rows = $statement->fetchAll();
 <script src="assets/bootstrap.bundle.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="assets/dashboard.js"></script>
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+
 </body>
 </html>

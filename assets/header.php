@@ -67,7 +67,8 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="register.php">Registrieren</a>
                 <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="acp.php">Admin Control Panel</a>
+                <a class="dropdown-item" href="acp.php">Admin Control Panel (alt)</a>
+                <a class="dropdown-item" href="dashboard.php">Dashboard (neu)</a>
                 <a class="dropdown-item" href="logout.php">Log Out</a>
               </div>
             </li>
