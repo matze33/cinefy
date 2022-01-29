@@ -13,16 +13,7 @@
 
           </nav>
         </div>
-    <!--    <div
-          class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5 mt-sm-0 text-sm-start">
-          <h3><strong>Group 2</strong></h3>
-          <nav class="nav flex-column">
-            <a class="nav-link active" href="#">1</a>
-            <a class="nav-link" href="#">2</a>
-            <a class="nav-link" href="#">3</a>
-            <a class="nav-link" href="#">4</a>
-          </nav>
-        </div>-->
+
         <div class="col-12 col-md-8 col-lg-6 text-md-start mt-5 mt-md-0">
           <h3><strong>Über Cinefy</strong></h3>
           <p>Mit Cinefy erlebst du dein Filmerlebnis endlich wieder auf der
@@ -35,17 +26,13 @@
           <h3><strong>Folge uns</strong></h3>
           <p class="text-h3">
             <a href="#">
-              <i class="fab fa-twitter" aria-hidden="true"></i>
-            </a>&nbsp;&nbsp;
+              <i class="fab fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;
             <a href="#">
-              <i class="fab fa-facebook" aria-hidden="true"></i>
-            </a>&nbsp;&nbsp;
+              <i class="fab fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;
             <a href="#">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>&nbsp;&nbsp;
+              <i class="fab fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;
             <a href="#">
-              <i class="fab fa-youtube" aria-hidden="true"></i>
-            </a>&nbsp;&nbsp;
+              <i class="fab fa-youtube" aria-hidden="true"></i></a>&nbsp;&nbsp;
           </p>
         </div>
       </div>

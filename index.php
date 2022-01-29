@@ -1,4 +1,8 @@
-<?php include('assets/header.php');
+<?php
+
+$title = 'Start';
+
+ include('assets/header.php');
 
 session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
@@ -90,8 +94,8 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
           </div>
         </div>
         <div class="row mt-5 d-flex align-items-top">
-          <div class="col-12 col-sm-10 col-md-8 m-auto col-lg-4  ">
-            <div class=" pb-5 pt-5 ps-4 pe-4 align-top card text-center">
+          <div class="col-12 col-sm-10 col-md-8 m-auto col-lg-4">
+            <div class=" pb-5 pt-5 ps-4 pe-4 align-top card text-center package">
               <h2 class="fw-light">Day-Time</h2>
               <hr>
               <p class="display-3"><strong>19,99€/mtl.</strong></p>
@@ -101,7 +105,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
             </div>
           </div>
           <div class="col-12 col-sm-10 col-md-8 m-auto col-lg-4 ">
-            <div class="  pb-5 pt-5 ps-4 pe-4 align-top card text-center">
+            <div class="  pb-5 pt-5 ps-4 pe-4 align-top card text-center package">
               <h2 class="fw-light">All-Access</h2>
               <hr>
               <p class="display-3"><strong>34,99€/mtl.</strong></p>
@@ -111,7 +115,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
             </div>
           </div>
           <div class="col-12 col-sm-10 col-md-8 m-auto col-lg-4  ">
-            <div class=" pb-5 pt-5 ps-4 pe-4 align-top card text-center">
+            <div class=" pb-5 pt-5 ps-4 pe-4 align-top card text-center package">
               <h2 class="fw-light">All-Access Gourmet</h2>
               <hr>
               <p class="display-3"><strong>49,99€/mtl.</strong></p>
@@ -131,7 +135,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 
         <!-- Modal content -->
         <div class="modal-content">
-        <?php include('signup.php');?>
+        <?php include('assets/register.php');?>
         </div>
         </div>
         </div>
@@ -232,7 +236,8 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
                           <strong>HINWEIS</strong> <span class="req">Pflichtfeld</span><br>Ich habe die Hinweise in der <a href="datenschutz.php">Datenschutzerklärung</a> verstanden und stimme diesen hiermit zu.
                         </label>
                       </div>
-                    <button type="submit" name="sendform" class="btn btn-light">Absenden</button>
+                    <button type="submit" name="sendform" class="btn btn-light" formaction="#contact">Absenden</button>
+                    <p><i>Hinweis: Diese Funktion ist im XAMPP-Betrieb nicht verfügbar.</i></p>
                   </form>
                 </div>
               </div>

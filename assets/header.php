@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Cinefy - Dein XXL-Streaming-Erlebnis</title>
+    <title><?php echo($title); ?> | Cinefy - Dein XXL-Streaming-Erlebnis</title>
 
     <meta charset="utf-8">
     <meta name="viewport"
@@ -14,7 +14,7 @@
     <link rel="stylesheet"
       href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css ">
     <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+      href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark border border-dark bg-dark dark-bg" style="position:fixed; width:100vw; z-index:999;">
       <div class="container">
         <a class="navbar-brand" href="index.php#">
-          <img src="assets/logo-30px.png" alt="UI Kit">
+          <img src="assets/logo-cutout.png" height="35" alt="UI Kit">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
@@ -65,10 +65,8 @@
                   alt="Htmlstream"> Interner Bereich <i class="fa fa-angle-down   "></i>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="register.php">Registrieren</a>
                 <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="acp.php">Admin Control Panel (alt)</a>
-                <a class="dropdown-item" href="dashboard.php">Dashboard (neu)</a>
+                <a class="dropdown-item" href="dashboard.php">Dashboard</a>
                 <a class="dropdown-item" href="logout.php">Log Out</a>
               </div>
             </li>

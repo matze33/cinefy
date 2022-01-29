@@ -1,4 +1,7 @@
 <?php
+
+$title = 'Login';
+
 session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 
@@ -13,12 +16,21 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($password, $user['password'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Du hast nun Zugang <a href="acp.php">zum Admin Control Panel</a>.');
+          $title = 'Weiterleitung';
+          include('assets/header.php');
+          echo "<meta http-equiv='refresh' content='3;URL=dashboard/index.php'>
+          <div style='background-color:#fff;color:#f00;text-align:center;''>
+            <br /><br /><br /><br />
+            Login erfolgreich.<br /><br />Du hast nun Zugang <a href='dashboard/index.php'>zum Dashboard</a>.
+            <br />Du wirst in 3 Sekunden automatisch weitergeleitet.<br /><br /></div>'";
+            include('assets/footer.php');
+            die();
     } else {
         $errorMessage = "E-Mail oder Passwort  ungültig<br>";
     }
 
 }
+
 ?>
 <?php include('assets/header.php');?>
 

@@ -1,4 +1,6 @@
 <?php
+$title = 'CRUD';
+session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 
 $gender = '';
@@ -54,12 +56,12 @@ if(empty($_POST) == false) {
     } else {
       $message = '<div class="aler alert-danger" role="alert">Bitte überprüfe die Eingabe und versuche es erneut!</div>';
     }
-    require 'dashboard.php';
+    require 'index.php';
     die();
 }
 }
 
- include('assets/header-acp.php');
+ include('../assets/header-acp.php');
 ?>
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">

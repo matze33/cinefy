@@ -1,4 +1,7 @@
-<?php include('assets/header.php');?>
+<?php
+  $title = 'Datenschutzerklärung';
+  include('assets/header.php');
+?>
 
   <br /><br /><br /><br />
 <div style="width:80%;margin-left:10%;margin-right:10%;"

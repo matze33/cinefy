@@ -1,9 +1,10 @@
 <?php
+$title = 'Dashboard';
 session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 
 if(!isset($_SESSION['userid'])) {
-  header('Location: login.php');
+  header('Location: ../login.php');
   exit();
 }
 
@@ -18,7 +19,7 @@ $statement = $pdo->prepare("SELECT * FROM customers");
 $result = $statement->execute();
 $rows = $statement->fetchAll();
 
- include('assets/header-acp.php');
+ include('../assets/header-acp.php');
  ?>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -73,7 +74,7 @@ $rows = $statement->fetchAll();
               <td>' . $subscription . '</td>
               <td>' . '
               <a href="crud.php?id=' . $row['id'] . '" title="Eintrag bearbeiten" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> Edit</a>
-              <a href="dashboard.php?delete=' . $row['id'] . '" title="Eintrag bearbeiten" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Löschen</a>
+              <a href="index.php?delete=' . $row['id'] . '" title="Eintrag bearbeiten" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Löschen</a>
               </td>
             </tr>';
           }
