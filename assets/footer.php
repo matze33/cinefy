@@ -24,7 +24,7 @@
           </nav>
         </div>-->
         <div class="col-12 col-md-8 col-lg-6 text-md-start mt-5 mt-md-0">
-          <h3><strong>Über uns</strong></h3>
+          <h3><strong>Über Cinefy</strong></h3>
           <p>Mit Cinefy erlebst du dein Filmerlebnis endlich wieder auf der
             großen Kinoleinwand bei dir um die Ecke - jetzt auch als Abo! Wir
             arbeiten mit 10 Kinobetreibern im Großraum Stuttgart zusammen.

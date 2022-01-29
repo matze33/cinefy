@@ -144,7 +144,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
       <div class="container">
         <div class="row text-center">
           <div class="col">
-            <h3 class="display-5 mb-4" id="team">Our Team</h3>
+            <h3 class="display-5 mb-4" id="team">Unser Team</h3>
           </div>
         </div>
         <div class="row text-center mt-md-5 justify-content-center">

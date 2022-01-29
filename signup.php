@@ -6,20 +6,11 @@ $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden s
 
 if(isset($_GET['register'])) {
     $error = false;
+    $email = '';
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $password2 = $_POST['password2'];
 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
-        $error = true;
-    }
-    if(strlen($password) == 0) {
-        echo 'Bitte ein Passwort angeben<br>';
-        $error = true;
-    }
-    if($password != $password2) {
-        echo 'Die Passwörter müssen übereinstimmen<br>';
+        echo '<span style="color:#ff0000;"><strong>Bitte eine gültige E-Mail-Adresse eingeben!</strong></span><br>';
         $error = true;
     }
 
@@ -30,23 +21,21 @@ if(isset($_GET['register'])) {
         $user = $statement->fetch();
 
         if($user !== false) {
-            echo 'Diese E-Mail-Adresse ist bereits vergeben<br>';
+            echo '<span style="color:#ff0000;"><strong>Diese E-Mail-Adresse ist bereits vergeben!</strong></span><br>';
             $error = true;
         }
     }
 
     //Keine Fehler, wir können den Nutzer registrieren
     if(!$error) {
-        $password_hash = password_hash($password, PASSWORD_DEFAULT);
-
-        $statement = $pdo->prepare("INSERT INTO customers (gender, name, email, password, subscription) VALUES (:gender, :name, :email, :password, :subscription)");
-        $result = $statement->execute(array('email' => $email, 'password' => $password_hash));
+        $statement = $pdo->prepare("INSERT INTO customers (name, email, subscription) VALUES (:name, :email, :subscription)");
+        $result = $statement->execute(array('email' => $email));
 
         if($result) {
-            echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
+            echo '<span style="color:#009100;"><strong>Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>.</strong></span>';
             $showFormular = false;
         } else {
-            echo 'Beim Speichern ist leider ein Fehler aufgetreten<br>';
+            echo '<span style="color:#ff0000;"><strong>Beim Speichern ist leider ein Fehler aufgetreten.</strong></span><br>';
         }
     }
 }
@@ -77,12 +66,6 @@ if($showFormular) {
     </div>
   </div>
   <div class="form-group">
-    Dein Passwort:<br>
-    <input type="password"  class="form-control" id="InputPassword" name="password">
-    Passwort wiederholen:<br>
-    <input type="password" class="form-control" id="InputPassword2" name="password2">
-  </div>
-  <div class="form-group">
     <div>
       <input type="radio" id="daytime" name="subscription" value="daytime"
          checked>
@@ -103,7 +86,7 @@ if($showFormular) {
       <input type="hidden" name="optin" value="0">
       <input type="checkbox" id="opt-in" name="optin" value="1" class="form-check-input" required>
       <label for="opt-in">
-        <strong>HINWEIS</strong> <span class="req">Pflichtfeld</span><br>Ich habe die Hinweise in der <a href="datenschutz.php">Datenschutzerklärung</a> verstanden und stimme diesen hiermit zu.
+        <strong>HINWEIS</strong> <span class="req">Pflichtfeld</span><br>Ich habe die <a href="#.php">Allgemeinen Geschäftsbedingungen</a> gelesen und stimme diesen hiermit zu.
       </label>
     </div>
   <input type="submit" value="Abschicken">

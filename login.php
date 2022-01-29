@@ -13,14 +13,15 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($password, $user['password'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="acp.php">internen Bereich</a>');
+        die('Login erfolgreich. Du hast nun Zugang <a href="acp.php">zum Admin Control Panel</a>.');
     } else {
-        $errorMessage = "E-Mail oder password war ungültig<br>";
+        $errorMessage = "E-Mail oder Passwort  ungültig<br>";
     }
 
 }
 ?>
 <?php include('assets/header.php');?>
+
 
 <div style="background-color:#fff;color:#f00;text-align:center;">
   <br /><br /><br /><br />
