@@ -65,8 +65,11 @@
                   alt="Htmlstream"> Interner Bereich <i class="fa fa-angle-down   "></i>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="login.php">Login</a>
                 <a class="dropdown-item" href="dashboard/index.php">Dashboard</a>
+                <a class="dropdown-item" href="dashboard/crud.php">CRUD</a>
+                <hr>
+                <a class="dropdown-item" href="register.php">Registrierung</a>
+                <a class="dropdown-item" href="login.php">Login</a>
                 <a class="dropdown-item" href="logout.php">Log Out</a>
               </div>
             </li>

@@ -50,13 +50,11 @@ var interval = setInterval(function() {
 </script>
 
 
-<div style="background-color:#fff;color:#a11;text-align:center;">
-  <br /><br /><br /><br />
+<div class="content red">
 
   <section class="pt-5 pb-5">
     <div class="content content-padding-l" style="background-image:url()">
-      <div class="content-overlay"
-        style="background-color:rgba(255,255,255,0)">
+      <div class="content-overlay">
         <div class="container">
           <div class="row flex justify-content-center">
             <div class="col-md-6   text-center">
@@ -77,7 +75,6 @@ var interval = setInterval(function() {
     </div>
   </section>
 
-<br /><br />
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>

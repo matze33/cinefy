@@ -61,7 +61,7 @@ a:hover {
 
 /* The Close Button */
 .close {
- color: #ff0000;
+ color: #a11;
  position:absolute;
  right:8px;
  top:0;
@@ -84,4 +84,22 @@ a:hover {
   background-color:rgba(170,17,17,0.9);
   color:#ffffff;
   transition:1s;
+}
+
+.content {
+  background-color:#ffffff;
+  text-align:center;
+  padding-top:100px;
+  padding-bottom:30px;
+  width:100%;
+  padding-left:15%;
+  padding-right:15%;
+}
+
+.red {
+  color:#a11;
+}
+
+.black {
+  color:#000;
 }

@@ -3,8 +3,7 @@
   include('assets/header.php');
 ?>
 
-  <br /><br /><br /><br />
-<div style="width:80%;margin-left:10%;margin-right:10%;"
+  <div class="content black">
   <h2>Impressum</h2>
   <h3>Angaben gemäß § 5 TMG</h3>
   <p>Tim Riegel<br />Nobelstraße 10<br />70569 Stuttgart</p>

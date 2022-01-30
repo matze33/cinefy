@@ -1,7 +1,11 @@
 <?php
 $title = 'CRUD';
-session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
+session_start();
+if(!isset($_SESSION['userid'])) {
+  header('Location: ../login.php');
+  exit();
+}
 
 $gender = '';
 $name = '';
@@ -73,8 +77,8 @@ if(empty($_POST) == false) {
 
 <h3>Eingetragene Kunden</h3>
 <p>In der Tabelle werden Kunden aufgelistet.</p>
-<p>Einen neuen Eintrag hinzufügen:<br />
-  <a href="crud.php" title="Hinzufügen" class="btn btn-info btn-sm"><i class="fa fa-edit"> </i>Neu hinzufügen</a></p>
+
+<?php if(!empty($id)) {echo("<div class='alert alert-danger'>In Bearbeitung: ID #"); echo($id); echo('</div>');} ?>
 
 <form class="my-3 py-2" id="form" action="crud.php?id=<?php echo $id?>" method ="post">
 
@@ -111,6 +115,10 @@ if(empty($_POST) == false) {
   <button type="submit" class="btn btn-primary">Speichern</button>
 
 </form>
+
+<p>Einen neuen Eintrag hinzufügen:<br />
+  <a href="crud.php" title="Hinzufügen" class="btn btn-info btn-sm"><i class="fa fa-edit"> </i>Neu hinzufügen</a></p>
+
 </main>
 </body>
 </html>

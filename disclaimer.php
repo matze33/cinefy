@@ -3,8 +3,7 @@
   include('assets/header.php');
 ?>
 
-  <br /><br /><br /><br />
-<div style="width:80%;margin-left:10%;margin-right:10%;"
+  <div class="content black">
   <h2>Haftungsausschluss (Disclaimer)</h2>
   <p><strong>Haftung für Inhalte</strong></p>
   <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>

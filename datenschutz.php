@@ -3,8 +3,7 @@
   include('assets/header.php');
 ?>
 
-  <br /><br /><br /><br />
-<div style="width:80%;margin-left:10%;margin-right:10%;"
+  <div class="content black">
 <h1>Datenschutzerklärung</h1>
 <h2>1. Datenschutz auf einen Blick</h2>
 <h3>Allgemeine Hinweise</h3>

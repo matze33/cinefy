@@ -1,8 +1,7 @@
 <?php
 $title = 'Dashboard';
-session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
-
+session_start();
 if(!isset($_SESSION['userid'])) {
   header('Location: ../login.php');
   exit();
@@ -79,11 +78,13 @@ $rows = $statement->fetchAll();
             </tr>';
           }
           ?>
-
-
           </tbody>
         </table>
       </div>
+
+      <p>Einen neuen Eintrag hinzufügen:<br />
+        <a href="crud.php" title="Hinzufügen" class="btn btn-info btn-sm"><i class="fa fa-edit"> </i>Neu hinzufügen</a></p>
+
     </main>
   </div>
 </div>

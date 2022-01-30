@@ -135,7 +135,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=cinefy', 'root', '');
 
         <!-- Modal content -->
         <div class="modal-content">
-        <?php include('assets/register.php');?>
+        <?php include('assets/signup.php');?>
         </div>
         </div>
         </div>

@@ -19,14 +19,13 @@ if(isset($_GET['login'])) {
           $title = 'Weiterleitung';
           include('assets/header.php');
           echo "<meta http-equiv='refresh' content='3;URL=dashboard/index.php'>
-          <div style='background-color:#fff;color:#f00;text-align:center;''>
-            <br /><br /><br /><br />
+          <div class='content red'><div class='alert alert-success' role='alert'>
             Login erfolgreich.<br /><br />Du hast nun Zugang <a href='dashboard/index.php'>zum Dashboard</a>.
-            <br />Du wirst in 3 Sekunden automatisch weitergeleitet.<br /><br /></div>'";
+            <br />Du wirst in 3 Sekunden automatisch weitergeleitet.</div></div>'";
             include('assets/footer.php');
             die();
     } else {
-        $errorMessage = "E-Mail oder Passwort  ungültig<br>";
+        $errorMessage = "E-Mail oder Passwort ungültig.";
     }
 
 }
@@ -35,13 +34,15 @@ if(isset($_GET['login'])) {
 <?php include('assets/header.php');?>
 
 
-<div style="background-color:#fff;color:#f00;text-align:center;">
-  <br /><br /><br /><br />
+<div class="content red">
 
-<?php
-if(isset($errorMessage)) {
-    echo $errorMessage;
-}
+  <h2>Login (Cinefy intern)</h2>
+  <br />
+
+  <?php
+    if(isset($errorMessage)) {
+    echo ("<div class='alert alert-danger' role='alert'>$errorMessage</div>");
+    }
 ?>
 
 <form action="?login=1" method="post">
@@ -53,8 +54,8 @@ Dein Passwort:<br>
 
 <input type="submit" value="Abschicken">
 </form>
-
-<br /><br />
+<br />
+<div class="alert alert-secondary" role="alert"><i>Pssst, die Zugangsdaten lauten: E-Mail: "team@cinefy.de" | Passwort: "HdM". ;)</i></div>
 </div>
 
 <?php include('assets/footer.php');?>

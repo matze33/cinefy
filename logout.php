@@ -8,11 +8,14 @@
   session_destroy();
 
   echo "<meta http-equiv='refresh' content='3;URL=index.php'>"  ?>
-  <div style="background-color:#fff;color:#f00;text-align:center;">
-    <br /><br /><br /><br />
-    Du wurdest ausgeloggt.<br /><br />
-    Du wirst in 3 Sekunden automatisch weitergeleitet.<br /><br /></div>
-  <br /><br />
-</div>
+  <div class="content red">
+
+    <h2>Logout (Cinefy intern)</h2>
+    <br />
+
+    <div class="alert alert-success" role="alert">
+      Du wurdest erfolgreich ausgeloggt.<br /><br />
+    Du wirst in 3 Sekunden automatisch weitergeleitet.</div>
+  </div>
 
 <?php include('assets/footer.php');?>
