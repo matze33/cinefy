@@ -66,7 +66,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="dashboard.php">Dashboard</a>
+                <a class="dropdown-item" href="dashboard/index.php">Dashboard</a>
                 <a class="dropdown-item" href="logout.php">Log Out</a>
               </div>
             </li>
