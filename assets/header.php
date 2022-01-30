@@ -8,8 +8,8 @@
     <meta charset="utf-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Cinefy ist dein Filmabo auf der großen Kinoleinwand im Raum Stuttgart. Alle Filme, die du willst im XXL-Format!">
+    <meta name="author" content="Cinefy, Matthias Gerling, Tim Riegel, Bootstrap">
     <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet"
       href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css ">
